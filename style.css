@@ -1,0 +1,52 @@
+body{
+	background-color: wheat;
+}
+#center {
+	text-align: center;
+	background-color: wheat;
+	color: saddlebrown;
+}
+
+  h1{
+    color: burlywood; 
+    font-family:Georgia, Arial, sans-serif; }
+
+  p{
+  	font-family: Georgia, Arial, sans-serif;
+  }
+
+#super {
+	background-color: burlywood;
+}
+
+#nav, #nav2 {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+#nav li {
+	margin: 0;
+	padding: 0;
+	border-bottom: 1px solid white;
+}
+#nav2 li {
+	margin: 0;
+	padding: 0;
+	border-bottom: none;
+	color: brown;
+
+}
+#nav a:link, a:visited {
+	display: block;
+	color: brown;
+	background-color: wheat;
+	text-align: center;
+	text-decoration: none;
+	padding: 10px;
+}
+
+#nav a:hover, a:active {
+	background-color: white;
+}
