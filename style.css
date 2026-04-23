@@ -1,45 +1,54 @@
-body{
+body {
 	background-color: wheat;
 }
+
 #center {
 	text-align: center;
 	background-color: wheat;
 	color: saddlebrown;
 }
 
-  h1{
-    color: burlywood; 
-    font-family:"Merriweather Sans", Arial, sans-serif; }
+h1 {
+	color: burlywood; 
+	font-family: "Merriweather Sans", Arial, sans-serif;
+}
 
-  p{
-  	font-family: "Oswald", sans-serif;
-  }
-
+p {
+	font-family: "Oswald", sans-serif;
+}
 
 #super {
 	background-color: burlywood;
 }
 
-#nav, #nav2 {
+.container {
+	display: flex;
+	flex-direction: column;
+}
+
+article {
+	padding: 10px;
+}
+
+aside {
+	padding: 10px;
+}
+
+#nav {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
-}
 
+	display: flex;
+	flex-direction: column;
+}
 
 #nav li {
-	margin: 0;
-	padding: 0;
 	border-bottom: 1px solid white;
 }
-#nav2 li {
-	margin: 0;
-	padding: 0;
-	border-bottom: none;
-	color: brown;
 
-}
-#nav a:link, a:visited {
+#nav a:link,
+#nav a:visited {
 	display: block;
 	color: brown;
 	background-color: wheat;
@@ -48,10 +57,83 @@ body{
 	padding: 10px;
 }
 
-#nav a:hover, a:active {
+#nav a:hover,
+#nav a:active {
 	background-color: white;
 }
 
- li {
-  	font: "Oswald";
-  }
+/* SECOND LIST */
+#nav2 {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#nav2 li {
+	color: brown;
+}
+
+@media (min-width: 600px) {
+
+	#nav {
+		flex-direction: row;
+		justify-content: space-around;
+	}
+
+	#nav li {
+		border-bottom: none;
+	}
+
+	/* SIDEBAR MOVES BESIDE CONTENT */
+	.container {
+		flex-direction: row;
+	}
+
+	article {
+		flex: 3;
+		text-align: left;
+	}
+
+	aside {
+		flex: 1;
+	}
+}
+
+@media (min-width: 900px) {
+
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	#nav {
+		justify-content: space-between;
+		padding: 0 20px;
+	}
+}
+
+@media (min-width: 1200px) {
+
+	.container {
+		max-width: 1400px;
+		margin: 0 auto;
+		gap: 20px;
+	}
+
+	article {
+		flex: 4;
+	}
+
+	aside {
+		max-width: 300px;
+	}
+
+	#nav {
+		padding: 0 40px;
+	}
+
+	#nav a {
+		padding: 15px 20px;
+		font-size: 18px;
+	}
+}
